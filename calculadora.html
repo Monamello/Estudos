@@ -1,0 +1,179 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Calculadora</title>
+		<meta charset="utf-8">
+		<!-- Existem outras metas como decripton, favicon, autor, ... -->
+		
+		
+		
+		<script>
+			/*
+			var a = parseFloat("2");
+			var b = parseFloat("3");
+			
+			alert(a+b); //aritmética
+			alert(a<b); //relacional
+			alert(a<b && b<a); //lógica
+			alert(a+""+b); //literal
+			
+			*/
+			
+		
+			function somar(){			
+				//Entrada de dado
+				//variaveis locais
+				var campo1 = document.getElementById("num1");		
+				var valorCampo1 = parseFloat(campo1.value);
+				
+				var campo2 = document.getElementById("num2");
+				var valorCampo2 = parseFloat(campo2.value);
+				
+				//Operacao
+				var soma = valorCampo1 + valorCampo2;
+				
+				//Saida de dados
+				var campo3 = document.getElementById("res");
+				campo3.value = soma;
+			}
+			
+			function subtrair(){
+				//Entrada de dados
+				var campo1 = document.getElementById("num1");
+				var valorCampo1 = campo1.value;
+				var num1 = parseFloat(valorCampo1);
+				
+				var num2 = parseFloat(document.getElementById("num2").value);
+				
+				//Processo
+				var resultado = num1-num2;
+				
+				//Saída
+				document.getElementById("res").value = resultado;
+				
+				//Alterar o simbolo de op
+				document.getElementById("op").innerHTML = " - ";
+			}
+
+
+
+			function multiplicar(){
+				//Entrada de dados
+				var campo1 = document.getElementById("num1");
+				var valorCampo1 = campo1.value;
+				var num1 = parseFloat(valorCampo1);
+				
+				var num2 = parseFloat(document.getElementById("num2").value);
+				
+				//Processo
+				var resultado = num1*num2;
+				
+				//Saída
+				document.getElementById("res").value = resultado;
+				
+				//Alterar o simbolo de op
+				document.getElementById("op").innerHTML = " * ";
+			}
+
+			function dividir(){
+				//Entrada de dados
+				var campo1 = document.getElementById("num1");
+				var valorCampo1 = campo1.value;
+				var num1 = parseFloat(valorCampo1);
+				
+				var num2 = parseFloat(document.getElementById("num2").value);
+				
+				//Processo
+				var resultado = num1/num2;
+				
+				//Saída
+				document.getElementById("res").value = resultado;
+				
+				//Alterar o simbolo de op
+				document.getElementById("op").innerHTML = " / ";
+			}
+
+			function MOD(){
+				//Entrada de dados
+				var campo1 = document.getElementById("num1");
+				var valorCampo1 = campo1.value;
+				var num1 = parseFloat(valorCampo1);
+				
+				var num2 = parseFloat(document.getElementById("num2").value);
+				
+				//Processo
+				var resultado = num1%num2;
+				
+				//Saída
+				document.getElementById("res").value = resultado;
+				
+				//Alterar o simbolo de op
+				document.getElementById("op").innerHTML = " % ";
+			}
+
+			function Potencia(){
+				//Entrada de dados
+				var campo1 = document.getElementById("num1");
+				var valorCampo1 = campo1.value;
+				var num1 = parseFloat(valorCampo1);
+				
+				var num2 = parseFloat(document.getElementById("num2").value);
+				
+				//Processo
+				var resultado = num1**num2;
+				
+				//Saída
+				document.getElementById("res").value = resultado;
+				
+				//Alterar o simbolo de op
+				document.getElementById("op").innerHTML = " ** ";
+			}
+
+			function raiz(){
+				//Entrada de dados
+				var campo1 = document.getElementById("num1");
+				var valorCampo1 = campo1.value;
+				var num1 = parseFloat(valorCampo1);
+				
+				var num2 = parseFloat(document.getElementById("num2").value);
+				
+				//Processo
+				var resultado =  Math.sqrt(num1);
+				
+				//Saída
+				document.getElementById("res").value = resultado;
+				
+				//Alterar o simbolo de op
+				document.getElementById("op").innerHTML = " z ";
+			}
+
+
+		</script>
+		
+	</head>
+	<body>
+		<h1 style="background:#BEBEBE;" align="center">Calculadora</h1>
+		
+		<input type="text" id="num1" placeholder="Numero 1" value="" >
+		<label id="op"> + </label>
+		<input type="text" id="num2" placeholder="Numero 2" value="">
+		<label> = </label>
+		<input type="text" id="res" readonly="readonly" >
+		
+		<br/>
+		<br/>
+		<div align="center">
+			<button onclick="somar()">Somar</button>
+			<button onclick="subtrair()">Subtrair</button>
+			<button onclick="multiplicar()">multiplicar</button>
+			<button onclick="dividir()">dividir</button>
+			<button onclick="MOD()">MOD</button>
+			<button onclick="Potencia()">Potência</button>
+			<button onclick="raiz()">Raiz</button>
+		</div>
+	</body>
+</html>
+
+
+
+
